@@ -24,5 +24,3 @@ def test_enviar_formulario_con_campo_obligatorio_email_vacío(page: Page):
     expect(page.get_by_role("button", name="Enviar Mensaje")).to_be_visible()
 
 
-Then debe ver un mensaje de error “El email es obligatorio”
-
