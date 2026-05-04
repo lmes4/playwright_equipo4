@@ -33,3 +33,4 @@ def test_enviar_formulario_con_campo_obligatorio_mensaje_vacio(page: Page):
     page.get_by_role("textbox", name="Email *").fill("test_automation@test.com")
     print("And pulsa enviar")
     expect(page.get_by_text("El mensaje es obligatorio")).to_be_visible()
+    
