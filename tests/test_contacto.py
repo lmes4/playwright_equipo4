@@ -21,9 +21,9 @@ def test_enviar_formulario_con_campo_obligatorio_email_vacio(page: Page):
     print("And rellena el campo obligatorio mensaje con “test mensaje”")
     page.get_by_role("textbox", name="Mensaje *").fill("test mensaje")
     print("And pulsa enviar")
-    page.get_by_role("button", name="Enviar Mensaje")
+    page.get_by_role("button", name="Enviar Mensaje").click()
     print("Then se muestra el mensaje de error el email es obligatorio")
-    expect(page.get_by_role("El email es obligatorio")).to_be_visible()
+    expect(page.get_by_text("El email es obligatorio")).to_be_visible()
 
 
 def test_enviar_formulario_con_campo_obligatorio_mensaje_vacio(page: Page):
