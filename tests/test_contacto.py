@@ -37,4 +37,14 @@ def test_enviar_formulario_con_campo_obligatorio_mensaje_vacio(page: Page):
     page.get_by_role("textbox", name="Email *").fill("test_automation@test.com")
     print("And pulsa enviar")
     expect(page.get_by_text("El mensaje es obligatorio")).to_be_visible()
-    
+
+def test_enviar_formulario_con_campo_obligatorio_nombre_vacio(page: Page):
+    print(Given la usuaria entra en la página de contacto “https://web-qa. dev.adalab.es/contact”  )
+    page.goto("https://web-qa.dev.adalab.es/contact")
+    print(When rellena el campo obligatorio email con “test@gmail.com) 
+    page.get_by_role("textbox", name="Email *").fill("test@gmail.com")
+    print(and rellena el campo mensaje con “ test mensaje” and pulsa enviar )      
+    page.get_by_role("textbox", name="Mensaje *").fill("texto mensaje ")
+    page.get_by_role("button", name="Enviar Mensaje").click()
+    print(Then debe ver un mensaje de error, “ El nombre es obligatorio”)
+    expect(page.get_by_text("El nombre es obligatorio")).to_be_visible()
