@@ -1,12 +1,18 @@
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
+from pages.productos_page import ProductosPage
 
-def test_ver_productos(page: Page):
-    print("When el usuario abre la página de productos Nuestros Productos | Vida Verde ")
-    page.goto("https://web-qa.dev.adalab.es/products")
-    print("Then el usuario ve la categoría del producto “plantas”")
-    expect(page.get_by_text("Plantas").nth(2)).to_be_visible()
+
+def test_productos_page(page: Page):
+    productos_page = ProductosPage(page);
+
+    print("When el usuario abre la pagina de productos")
+    productos_page.open_productos_page()
+
+    print("Then el usuario ve la categoria del producto “plantas”")
+    productos_page.verify_productos_category("Plantas")
+
     print("And el usuario ve el nombre del producto “Fycus Lyrata”")
-    expect(page.get_by_role("heading", name="Ficus Lyrata")).to_be_visible()
-    print("And el usuario ve el precio del producto “35.00 euros”")
-    expect(page.get_by_text("35.00 €")).to_be_visible()
+    productos_page.verify_productos_name("Ficus Lyrata")
 
+    print("And el usuario ve el precio del producto “35.00 euros”")
+    productos_page.verify_productos_price("35.00 €")
