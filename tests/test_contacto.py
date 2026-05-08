@@ -48,3 +48,7 @@ def test_enviar_formulario_con_campo_obligatorio_nombre_vacio(page: Page):
     page.get_by_role("button", name="Enviar Mensaje").click()
     print("Then debe ver un mensaje de error, “El nombre es obligatorio”")
     expect(page.get_by_text("El nombre es obligatorio")).to_be_visible()
+
+def test_enviar_formulario_con_campo_obligatorio_email_invalido(page: Page):
+    print ("Given el usuario entra en la página de contacto Contáctanos | Vida Verde “https://web-qa.dev.adalab.es/contact”)")
+    
