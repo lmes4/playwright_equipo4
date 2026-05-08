@@ -49,6 +49,17 @@ def test_enviar_formulario_con_campo_obligatorio_nombre_vacio(page: Page):
     print("Then debe ver un mensaje de error, “El nombre es obligatorio”")
     expect(page.get_by_text("El nombre es obligatorio")).to_be_visible()
 
+
 def test_enviar_formulario_con_campo_obligatorio_email_invalido(page: Page):
     print ("Given el usuario entra en la página de contacto Contáctanos | Vida Verde “https://web-qa.dev.adalab.es/contact”)")
-    
+    page.goto("https://web-qa.dev.adalab.es/contact")
+    print ("When rellena el campo obligatorio nombre con “Elisabet QA”")
+    page.get_by_role("textbox", name="Nombre *").fill("Elisabet QA")
+    print ("And rellena el campo obligatorio email con “email”")
+    page.get_by_role("textbox", name="Email *").fill("email")
+    print ("And rellena el campo obligatorio mensaje con “test mensaje”")
+    page.get_by_role("textbox", name="Mensaje *").fill("test mensaje")
+    print ("And pulsa enviar")
+    page.get_by_role("button", name="Enviar Mensaje").click()
+    print ("Then debe ver un mensaje de error “El formato del email no es válido”")
+    expect(page.get_by_text("El formato del email no es vá")).to_be_visible()
