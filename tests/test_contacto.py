@@ -11,7 +11,7 @@ def test_enviar_formulario_con_campos_obligatorios_validos(page: Page):
     page.get_by_role("textbox", name="Mensaje *").fill("test mensaje")
     print("And envía el formulario")
     page.get_by_role("button", name="Enviar Mensaje").click()
-    print("¡Mensaje enviado con éxito!")
+    print("Then debería ver un mensaje de exito")
     expect(page.get_by_text("¡Mensaje enviado con éxito!")).to_be_visible()
 
 
@@ -71,4 +71,4 @@ def test_enviar_formulario_con_campo_obligatorio_email_invalido(page: Page):
     print ("And pulsa enviar")
     page.get_by_role("button", name="Enviar Mensaje").click()
     print ("Then debe ver un mensaje de error “El formato del email no es válido”")
-    expect(page.get_by_text("El formato del email no es vá")).to_be_visible()
+    expect(page.get_by_text("El formato del email no es válido")).to_be_visible()
