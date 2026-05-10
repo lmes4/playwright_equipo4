@@ -11,7 +11,7 @@ def test_enviar_formulario_con_campos_obligatorios_validos(page: Page):
     page.get_by_role("textbox", name="Mensaje *").fill("test mensaje")
     print("And envía el formulario")
     page.get_by_role("button", name="Enviar Mensaje").click()
-    print("¡Mensaje enviado con éxito!")
+    print("Then debería ver un mensaje de exito")
     expect(page.get_by_text("¡Mensaje enviado con éxito!")).to_be_visible()
 
 
