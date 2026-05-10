@@ -45,3 +45,28 @@ def test_enviar_formulario_con_campo_obligatorio_email_vacio(page: Page):
     expect(page.get_by_text("El email es obligatorio")).to_be_visible()
     
 
+#Realizado por Elisabet
+def test_enviar_formulario_con_campo_obligatorio_email_invalido(page: Page):
+
+    contact_page = ContactPage ()
+
+    print ("Given el usuario entra en la página de contacto Contáctanos | Vida Verde “https://web-qa.dev.adalab.es/contact”)")
+    contact_page.abrir_pagina_contactos()
+
+    print ("When rellena el campo obligatorio nombre con “Elisabet QA”")
+    contact_page.rellenar_nombre_contacto ("Elisabet QA")
+
+    print ("And rellena el campo obligatorio email con “email”")
+    contact_page.rellena_email_contacto ("email")
+
+    print ("And rellena el campo obligatorio mensaje con “test mensaje”")
+    contact_page.rellena_mensaje_contacto ("test mensaje")
+
+    print ("And pulsa enviar")
+    contact_page.hace_click_enviar()
+
+    print ("Then debe ver un mensaje de error “El formato del email no es válido”")
+    contact_page.verifica_mensaje("El formato del email no es válido")
+
+
+
