@@ -69,7 +69,7 @@ def test_carrito_quitar_productos_del_carrito_y_ver_resumen(page: Page):
     page.get_by_text("IVA (21%)3.88 €").click()
     print("and debe ver el total de envío “5”")
     page.get_by_text("Envío5.00 €").click()
-    print("then debe ver el mensaje “tu carrito está vacío”")
+    print("and el total “27.38”")
     expect(page.get_by_text("Total27.38 €")).to_be_visible()
     
 
