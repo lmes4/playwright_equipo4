@@ -43,9 +43,13 @@ def test_enviar_formulario_con_campo_obligatorio_mensaje_vacio(page: Page):
 def test_enviar_formulario_con_campo_obligatorio_nombre_vacio(page: Page):
     print("Given la usuaria abre la página de contacto “https://web-qa.dev.adalab.es/contact”")
     page.goto("https://web-qa.dev.adalab.es/contact")
+    print("And hace click en el campo Email")
     page.get_by_role("textbox", name="Email *").click()
+    print("And escribe un email válido")
     page.get_by_role("textbox", name="Email *").fill("test@gmail.com")
+    print("And hace click en el campo Mensaje")
     page.get_by_role("textbox", name="Mensaje *").click()
+    print("And escribe un mensaje")
     page.get_by_role("textbox", name="Mensaje *").fill("texto mensaje")
     print("And pulsa enviar")
     page.get_by_role("button", name="Enviar Mensaje").click()
