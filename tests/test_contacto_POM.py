@@ -1,4 +1,4 @@
-def test_complete_and_submit_the_contact_form_with_mandatory_fields(page: Page):
+def test_enviar_formulario_con_campos_obligatorios_validos(page: Page):
 
     contact_page = ContactPage(page)
 
@@ -22,7 +22,7 @@ def test_complete_and_submit_the_contact_form_with_mandatory_fields(page: Page):
     contact_page.verify_message_form("¡Mensaje enviado con éxito!")
 
 
-def test_form_with_required_email_field_left_empty(page: Page):
+def test_enviar_formulario_con_campo_obligatorio_email_vacio(page: Page):
 
     print ("Given la usuaria abre la página de contacto “https://web-qa.dev.adalab.es/contact ”")
     page.goto("https://web-qa.dev.adalab.es/contact")
