@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
-from pages.productos_page import ProductosPage
+from pages.contacto_page import ContactoPage
+
 
 
 def test_productos_page(page: Page):
