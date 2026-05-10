@@ -1,4 +1,6 @@
 from playwright.sync_api import Page, expect
+from pages.productos_page import ProductosPage
+from pages.carrito_page import CarritoPage
 
 def test_carrito_agregar_productos_al_carrito_ver_resumen_y_vaciar_carrito(page: Page):
     print("When la usuaria visita la página de productos “Nuestros Productos | Vida Verde  ”")
