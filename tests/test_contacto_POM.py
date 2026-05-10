@@ -1,3 +1,5 @@
+from playwright.sync_api import Page, expect
+
 def test_enviar_formulario_con_campos_obligatorios_validos(page: Page):
 
     contact_page = ContactPage(page)
