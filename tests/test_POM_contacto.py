@@ -26,7 +26,7 @@ def test_enviar_formulario_con_campos_obligatorios_validos(page: Page):
     contact_page.verify_message_form("¡Mensaje enviado con éxito!")
 
 #Realizado por Jenniffer
-ddef test_form_with_required_name_field_left_empty(page: Page):
+def test_form_with_required_name_field_left_empty(page: Page):
     contact_page = ContactPage(page)
     print("Given the users enters contact page 'Contact| Vida Verde'")
     contact_page.open_contact_page()
