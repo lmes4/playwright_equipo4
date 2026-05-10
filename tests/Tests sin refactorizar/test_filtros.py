@@ -1,6 +1,6 @@
 from playwright.sync_api import Page, expect
 
-
+#Realizado por Ana
 def test_filtrar_nombre_categoria_precio_valido(page: Page):
     print("Given la usuaria abre la página de 'Nuestros Productos | Vida Verde'")
     page.goto("https://web-qa.dev.adalab.es/products")
@@ -21,6 +21,7 @@ def test_filtrar_nombre_categoria_precio_valido(page: Page):
     expect(page.get_by_text("Regadera Metálica")).to_be_visible()
 
 
+#Realizado por Ana
 def test_filtrar_valor_sin_resultados(page: Page):
     print("Given la usuaria abre la página de 'Nuestros Productos | Vida Verde'")
     page.goto("https://web-qa.dev.adalab.es/products")

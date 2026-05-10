@@ -1,6 +1,7 @@
 from playwright.sync_api import Page, expect
 from pages.contact_page import ContactPage
 
+#Realizado por Jenniffer
 def test_enviar_formulario_con_campos_obligatorios_validos(page: Page):
     print("Given la usuaria abre la página de contacto “https://web-qa.dev.adalab.es/contact ”")
     page.goto("https://web-qa.dev.adalab.es/contact")
@@ -16,6 +17,7 @@ def test_enviar_formulario_con_campos_obligatorios_validos(page: Page):
     expect(page.get_by_text("¡Mensaje enviado con éxito!")).to_be_visible()
 
 
+#Realizado por Jenniffer
 def test_enviar_formulario_con_campo_obligatorio_email_vacio(page: Page):
     print("Given la usuaria abre la página de contacto “https://web-qa.dev.adalab.es/contact ”")
     page.goto("https://web-qa.dev.adalab.es/contact")
@@ -29,6 +31,7 @@ def test_enviar_formulario_con_campo_obligatorio_email_vacio(page: Page):
     expect(page.get_by_text("El email es obligatorio")).to_be_visible()
 
 
+#Realizado por Lorena
 def test_enviar_formulario_con_campo_obligatorio_mensaje_vacio(page: Page):
     print("Given la usuaria abre la página de contacto “https://web-qa.dev.adalab.es/contact”")
     page.goto("https://web-qa.dev.adalab.es/contact")
@@ -40,7 +43,7 @@ def test_enviar_formulario_con_campo_obligatorio_mensaje_vacio(page: Page):
     expect(page.get_by_text("El mensaje es obligatorio")).to_be_visible()
 
 
-
+#Realizado por Ana
 def test_enviar_formulario_con_campo_obligatorio_nombre_vacio(page: Page):
     print("Given la usuaria abre la página de contacto “https://web-qa.dev.adalab.es/contact”")
     page.goto("https://web-qa.dev.adalab.es/contact")
@@ -59,7 +62,7 @@ def test_enviar_formulario_con_campo_obligatorio_nombre_vacio(page: Page):
     
     
 
-
+#Realizado por Elisabet
 def test_enviar_formulario_con_campo_obligatorio_email_invalido(page: Page):
 
     contact_page = ContactPage ()

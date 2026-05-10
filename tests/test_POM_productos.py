@@ -2,7 +2,7 @@ from playwright.sync_api import Page
 from pages.contact_page import ContactoPage
 
 
-
+#Realizado por Lorena
 def test_productos_page(page: Page):
     productos_page = ProductosPage(page);
 

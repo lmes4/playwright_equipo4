@@ -1,6 +1,7 @@
 from playwright.sync_api import Page, expect
 from pages.contact_page import ContactPage
 
+#Realizado por Jenniffer
 def test_enviar_formulario_con_campos_obligatorios_validos(page: Page):
 
     contact_page = ContactPage(page)
@@ -24,7 +25,7 @@ def test_enviar_formulario_con_campos_obligatorios_validos(page: Page):
     print("Then debería ver un mensaje de éxito")
     contact_page.verify_message_form("¡Mensaje enviado con éxito!")
 
-
+#Realizado por Jenniffer
 def test_enviar_formulario_con_campo_obligatorio_email_vacio(page: Page):
 
     print ("Given la usuaria abre la página de contacto “https://web-qa.dev.adalab.es/contact ”")
@@ -43,3 +44,4 @@ def test_enviar_formulario_con_campo_obligatorio_email_vacio(page: Page):
     print("Then se muestra el mensaje de error el email es obligatorio")
     expect(page.get_by_text("El email es obligatorio")).to_be_visible()
     
+

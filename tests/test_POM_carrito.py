@@ -2,6 +2,7 @@ from playwright.sync_api import Page, expect
 from pages.productos_page import ProductosPage
 from pages.carrito_page import CarritoPage
 
+#Realizado por Jenniffer
 def test_carrito_agregar_productos_al_carrito_ver_resumen_y_vaciar_carrito(page: Page):
     print("When la usuaria visita la página de productos “Nuestros Productos | Vida Verde  ”")
     page.goto("https://web-qa.dev.adalab.es/products")
@@ -45,7 +46,7 @@ def test_carrito_agregar_productos_al_carrito_ver_resumen_y_vaciar_carrito(page:
     expect(page.get_by_text("Tu carrito está vacío")).to_be_visible()
 
 
-
+#Realizado por Jenniffer
 def test_carrito_quitar_productos_del_carrito_y_ver_resumen(page: Page):
     print("When la usuaria visita la página de productos “Nuestros Productos | Vida Verde  ”")
     page.goto("https://web-qa.dev.adalab.es/products")
