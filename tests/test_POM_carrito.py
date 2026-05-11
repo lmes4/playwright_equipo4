@@ -12,8 +12,8 @@ def test_carrito_agregar_productos_al_carrito_ver_resumen_y_vaciar_carrito(page:
     productos_page.abrir_productos_page()
     
     print("And filtra por nombre “Sansevieria”")
-    productos_page.buscar_producto("Sansevieria")
-    
+    productos_page.filtrar_por_nombre("Sansevieria")
+
     print("And añade el producto al carrito")
     productos_page.añadir_producto("Sansevieria")
     
@@ -21,7 +21,7 @@ def test_carrito_agregar_productos_al_carrito_ver_resumen_y_vaciar_carrito(page:
     productos_page.limpiar_filtros()
     
     print("and filtra por nombre “maceta de barro”")
-    productos_page.buscar_producto("Maceta de barro")
+    productos_page.filtrar_por_nombre("Maceta de barro")
 
     print("And añade el producto al carrito")
     productos_page.añadir_producto("Maceta de barro")
@@ -79,7 +79,7 @@ def test_carrito_quitar_productos_del_carrito_y_ver_resumen(page: Page):
     productos_page.abrir_productos_page()
     
     print("And filtra por nombre ficus")
-    productos_page.buscar_producto("ficus")
+    productos_page.filtrar_por_nombre("ficus")
     
     print("And añade el producto al carrito")
     productos_page.añadir_producto("ficus")
@@ -88,7 +88,7 @@ def test_carrito_quitar_productos_del_carrito_y_ver_resumen(page: Page):
     productos_page.limpiar_filtros()
     
     print("and filtra por nombre “tijeras”")
-    productos_page.buscar_producto("tijeras")
+    productos_page.filtrar_por_nombre("tijeras")
     
     print("And añade el producto al carrito")
     productos_page.añadir_producto("tijeras")
