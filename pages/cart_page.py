@@ -27,4 +27,6 @@ class CartPage:
 
     def ir_a_checkout(self):
         self.page.get_by_role("button", name="Finalizar compra").click()
+
+    
     

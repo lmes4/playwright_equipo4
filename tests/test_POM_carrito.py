@@ -9,7 +9,7 @@ def test_carrito_agregar_productos_al_carrito_ver_resumen_y_vaciar_carrito(page:
     cart_page = CartPage(page)
     
     print("When la usuaria visita la página de productos “Nuestros Productos | Vida Verde  ”")
-    contact_page.open_productos_page(page)
+    productos_page.abrir_productos_page()
     
     print("And filtra por nombre “Sansevieria”")
     page.get_by_role("searchbox", name="Nombre").fill("sansevieria")
