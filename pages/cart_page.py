@@ -13,14 +13,32 @@ class CartPage:
     def verificar_producto_en_carrito(self, product_name):
         expect(self.page.get_by_text(product_name)).to_be_visible()
 
+    def verificar_categoria_en_carrito(self, categoria_name):
+        expect(self.page.get_by_text(categoria_name)).to_be_visible()
+
+    def verificar_precio_compra(self, precio):
+        expect(self.page.get_by_text(precio)).to_be_visible()
+
     def verificar_total_precio(self, total):
         expect(self.page.get_by_text(total)).to_be_visible()
 
     def verificar_numero_productos(self, cantidad):
         expect(self.page.locator(".cart-item")).to_have_count(cantidad)
 
+    def verificar_subtotal_compra(self, subtotal):
+        expect(self.page.get_by_text(subtotal)).to_be_visible()
+
+    def verificar_iva_compra(self, iva):
+        expect(self.page.get_by_text(iva)).to_be_visible()
+
+    def verificar_envio_compra(self, envio):
+        expect(self.page.get_by_text(envio)).to_be_visible()
+
     def eliminar_producto(self, product_name):
         self.page.get_by_role("button", name=f"Eliminar {product_name}").click()
+
+    def verificar_producto_no_visible_carrito(self, product_name):
+        expect(self.page.get_by_text(product_name)).not_to_be_visible()
 
     def vaciar_carrito(self):
         self.page.get_by_role("button", name="Vaciar carrito").click()
