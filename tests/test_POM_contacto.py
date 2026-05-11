@@ -69,6 +69,7 @@ def test_enviar_formulario_con_campo_obligatorio_email_invalido(page: Page):
 
 #Realizado por Lorena
 def test_enviar_formulario_con_campo_obligatorio_mensaje_vacio(page: Page):
+    contact_page = ContactPage ()
     
     print("Given la usuaria abre la pagina de contacto: Contáctanos | Vida Verde")
     page.goto("https://web-qa.dev.adalab.es/contact")
