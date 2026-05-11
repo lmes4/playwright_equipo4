@@ -1,5 +1,6 @@
 from playwright.sync_api import Page, expect
 
+#Realizado por Jenniffer
 class CartPage:
 
     def __init__(self, page: Page):
