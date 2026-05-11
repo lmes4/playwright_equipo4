@@ -7,3 +7,6 @@ class CompraPage:
         self.url = 'https://web-qa.dev.adalab.es/products'
         self.title = "Compra"
 
+    def abrir_productos_page(self):
+        self.page.goto(self.url)
+        
