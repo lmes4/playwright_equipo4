@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from pages.contact_page import ContactoPage
+from pages.productos_page import ProductosPage
 
 
 #Realizado por Lorena
