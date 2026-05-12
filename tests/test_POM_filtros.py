@@ -32,13 +32,13 @@ def test_filtrar_valor_sin_resultados(page: Page):
     productos_page = ProductosPage(page)
 
     print("Given la usuaria entra en la página de productos")
-    productos_page.open_productos_page()
+    productos_page.abrir_productos_page()
 
     print("When filtra por el nombre 'manzana'")
-    productos_page.fill_filter_name("manzana")
+    productos_page.filtrar_por_nombre("manzana")
 
     print("Then debería ver el mensaje 'No se encontraron productos'")
-    productos_page.verify_no_results_message("No se encontraron productos")    
+    productos_page.verificar_mensaje_no_resultados("No se encontraron productos")    
 
 
 
