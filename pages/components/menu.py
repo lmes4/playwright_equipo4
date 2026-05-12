@@ -1,12 +1,10 @@
 from playwright.sync_api import Page, expect
 
-class MenuPage:
+class Menu:
 
     def __init__(self, page: Page):
         self.page = page
-        self.url = "https://web-qa.dev.adalab.es/"
+        self.menu_quienes_somos = "Quiénes Somos"
 
-    def abrir_pagina_inicio (self):
-        self.page.goto(self.url)
-
-        self.page.goto("https://web-qa.dev.adalab.es/")
+    def abrir_menu_quienes_somos (self):
+        self.page.get_by_role("link", name=self.menu_quienes_somos).click()
