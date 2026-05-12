@@ -1,7 +1,12 @@
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
+from pages.productos_page import ProductosPage
 
 #Realizado por Ana
+
+
 def test_filtrar_nombre_categoria_precio_valido(page: Page):
+    productos = ProductosPage(page)
+
     print("Given la usuaria abre la página de 'Nuestros Productos | Vida Verde'")
     page.goto("https://web-qa.dev.adalab.es/products")
 
@@ -22,7 +27,13 @@ def test_filtrar_nombre_categoria_precio_valido(page: Page):
 
 
 #Realizado por Ana
+
+from playwright.sync_api import Page, expect
+from pages.productos_page import ProductosPage
+
+
 def test_filtrar_valor_sin_resultados(page: Page):
+    productos = ProductosPage(page)
     print("Given la usuaria abre la página de 'Nuestros Productos | Vida Verde'")
     page.goto("https://web-qa.dev.adalab.es/products")
 
