@@ -15,9 +15,6 @@ class CompraPage:
     
     def agregar_productos_carrito(self):
         self.page.get_by_role("button", name="Añadir Juego de Palas al").click()
-
-    def visitar_pagina_carrito(self):
-        self.page.get_by_role("link", name="Carrito de compra").click()
     
     def hacer_click_pago(self):
         self.page.get_by_role("link", name="Proceder al Pago").click()

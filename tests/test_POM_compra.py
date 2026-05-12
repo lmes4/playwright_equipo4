@@ -1,6 +1,7 @@
 from playwright.sync_api import Page
 from pages.compra_page import CompraPage
 from pages.productos_page import ProductosPage
+from pages.cart_page import CartPage
 
 
 #Realizado por Lorena
@@ -8,6 +9,7 @@ def test_compra_con_tarjeta_vacia(page: Page):
 
     compra_page = CompraPage ()
     productos_page = ProductosPage ()
+    cart_page = CartPage ()
 
     print("Given el usuario abre la página de productos Nuestros Productos | Vida Verde ")
     productos_page.abrir_productos_page()
@@ -19,7 +21,7 @@ def test_compra_con_tarjeta_vacia(page: Page):
     compra_page.agregar_productos_carrito()
 
     print("And visita la página del carrito")
-    compra_page.visitar_pagina_carrito()
+    cart_page.abrir_cart_page
 
     print("And hace click en proceder al pago")
     compra_page.hacer_click_pago()
