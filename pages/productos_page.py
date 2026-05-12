@@ -59,32 +59,31 @@ class ProductosPage:
    
    
  #Realizado por Ana 
-        
 
-from playwright.sync_api import Page, expect
-
-class ProductosPage:
-
-    def __init__(self, page: Page):
-        self.page = page
-        self.url = 'https://web-qa.dev.adalab.es/products'
-        self.title = "Catálogo de Productos"
-
-
-    def filtrar_por_nombre(self, nombre):   
+    def filtrar_por_nombre(self, nombre):
         self.page.get_by_role("searchbox", name="Nombre").fill(nombre)
 
-    def filtrar_por_categoria(self, categoria):    
+    def filtrar_por_categoria(self, categoria): 
         self.page.get_by_label("Categoría").select_option(categoria)
 
-    def filtrar_por_precio_minimo(self, minimo):    
+    def filtrar_por_precio_minimo(self, minimo): 
         self.page.get_by_role("spinbutton", name="Precio mínimo").fill(minimo)
 
-    def filtrar_por_precio_maximo(self, maximo):    
+    def filtrar_por_precio_maximo(self, maximo):
         self.page.get_by_role("spinbutton", name="Precio máximo").fill(maximo)
 
     def verificar_producto_visible(self, nombre_producto):
         expect(self.page.get_by_text(nombre_producto)).to_be_visible()
 
-    def verificar_mensaje_no_resultados(self):    
+    def verificar_mensaje_no_resultados(self):
         expect(self.page.get_by_text("No se encontraron productos")).to_be_visible()            
+
+
+
+ #Realizado por Jenniffer
+
+    def añadir_producto(self, producto):
+        self.page.get_by_role("button", name=f"Añadir {producto} al carrito").click()
+
+    def limpiar_filtros(self):
+        self.page.get_by_role("button", name="Quitar filtros y ver todos").click()
