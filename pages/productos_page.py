@@ -24,24 +24,23 @@ class ProductosPage:
 
     def verificar_productos_url(self):
         expect(self.page).to_have_url(self.url)
-        
 
-#Realizado por Ana
+    #Realizado por Ana
 
-def filtrar_por_nombre(self, nombre):   
-    self.page.get_by_role("searchbox", name="Nombre").fill(nombre)
+    def filtrar_por_nombre(self, nombre):   
+        self.page.get_by_role("searchbox", name="Nombre").fill("nombre")
 
-def filtrar_por_categoria(self, categoria):    
-    self.page.get_by_label("Categoría").select_option(categoria)
+    def filtrar_por_categoria(self, categoria):    
+        self.page.get_by_label("Categoría").select_option("categoria")
 
-def filtrar_por_precio_minimo(self, minimo):    
-    self.page.get_by_role("spinbutton", name="Precio mínimo").fill(minimo)
+    def filtrar_por_precio_minimo(self, minimo):    
+        self.page.get_by_role("spinbutton", name="Precio mínimo").fill("minimo")
 
-def filtrar_por_precio_maximo(self, maximo):    
-    self.page.get_by_role("spinbutton", name="Precio máximo").fill(maximo)
+    def filtrar_por_precio_maximo(self, maximo):    
+        self.page.get_by_role("spinbutton", name="Precio máximo").fill("maximo")
 
-def verificar_producto_visible(self, nombre_producto):
-    expect(self.page.get_by_text(nombre_producto)).to_be_visible()
+    def verificar_producto_visible(self, nombre_producto):
+        expect(self.page.get_by_text(name= "Regadera Metalica")).to_be_visible()
 
-def verificar_mensaje_no_resultados(self):    
-    expect(self.page.get_by_text("No se encontraron productos")).to_be_visible()        
+    def verificar_mensaje_no_resultados(self):    
+        expect(self.page.get_by_text("No se encontraron productos")).to_be_visible()        

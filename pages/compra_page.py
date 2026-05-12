@@ -50,13 +50,20 @@ class CompraPage:
         self.page.get_by_role("textbox", name="Email *").fill("test@gmail.com")
 
     def rellenar_direccion_contacto (self, direccion):
-        self.page.get_by_role("textbox", name="Dirección *").fill("Calle Aragon, 25, Madrid")
+        self.page.get_by_role("textbox", name="Direccion *").fill("Calle Aragon, 25, Madrid")
 
     def completar_click_compra(self):
         self.page.get_by_role("button", name="Completar Compra").click()
 
     def visualizar_checkout_compra(self):
         expect(self.page.get_by_role("heading", name="Finalizar Compra")).to_be_visible()
+
+    def añadir_tarjeta_invalida(self):
+        self.page.get_by_role("textbox", name="Numero de Tarjeta de Credito *").fill("1111 4242 4242 4242")
+
+    def verificar_error_tarjeta(self):
+        expect(self.page.get_by_text("Tarjeta de credito no valida")).to_be_visible()
+
 
 
     
