@@ -1,11 +1,10 @@
 from playwright.sync_api import Page, expect
-from pages.components.menu import MenuPage
+
 
 
 #Realizado por Elisabet
 def test_visitar_los_enlaces_del_menú(page: Page):
 
-    menu_page = MenuPage()
 
     print("Cuando el usuario abre la página Inicio | Vida Verde “https://web-qa.dev.adalab.es”")
     page.goto("https://web-qa.dev.adalab.es")
