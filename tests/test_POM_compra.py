@@ -74,7 +74,7 @@ def test_compra_con_tarjeta_invalida(page: Page):
     productos_page.abrir_productos_page()
 
     print("When filtra por nombre “palas”")
-    productos_page.filtrar_por_categoria ()
+    productos_page.filtrar_por_categoria ("palas")
 
     print("And agrega el producto al carrito")
     productos_page.añadir_producto()
@@ -137,7 +137,7 @@ def test_compra_datos_validos (page: Page):
     print ("Ve la URL https://web-qa.dev.adalab.es/products")
     productos_page.abrir_productos_page()
     print ("Filtra por nombre de producto 'Palas'")
-    productos_page.filtrar_por_categoria("Palas")
+    productos_page.filtrar_por_categoria()
     print ("Añade el artículo 'Juego de Palas'")
     productos_page.añadir_producto()
     print ("Visita la página del carrito")
