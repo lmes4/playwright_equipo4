@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
 from pages.checkout_page import CheckoutPage
+from pages.confirmation_page import ConfirmationPage
 from pages.productos_page import ProductosPage
 from pages.cart_page import CartPage
 
@@ -130,6 +131,7 @@ def test_compra_datos_validos (page: Page):
     productos_page = ProductosPage ()
     cart_page = CartPage ()
     checkout_page = CheckoutPage ()
+    confirmation_page = ConfirmationPage ()
 
 
     print ("Ve la URL https://web-qa.dev.adalab.es/products")
@@ -144,43 +146,40 @@ def test_compra_datos_validos (page: Page):
     cart_page.hacer_click_pago()
 
     print ("Comprueba el 'Resumen del pedido'")
-    checkpout_page.ver
-    expect(page.get_by_role("heading", name="Resumen del Pedido")).to_be_visible()
-
-
+    checkout_page.verifica_resumen_compra()
     print("Ve el producto 'Juego de palas'")
-    expect(page.get_by_text("Juego de Palas15.99 €")).to_be_visible()
+    checkout_page.verificar_producto_compra()
+    print("Verifica el precio del producto")
+    checkout_page.verificar_precio_compra()
     print("Ve el IVA '3,36€'")
-    expect(page.get_by_text("IVA (21%)3.36 €")).to_be_visible()
+    checkout_page.verificar_iva_compra()
     print("Ve el envío '5€'")
-    expect(page.get_by_text("Envío5.00 €")).to_be_visible()
+    checkout_page.verificar_envio_compra()
     print("Ve el total de compra por importe '24,35€'")
-    expect(page.get_by_text("Total24.35 €")).to_be_visible()
-
+    checkout_page.verificar_total_compra()
     print ("Rellena el nombre 'Marta Díaz'")
-    page.get_by_role("textbox", name="Nombre Completo *").fill("Marta Díaz")
+    checkout_page.rellenar_nombre_contacto()
     print ("Rellena el email 'test@gmail.com'")
-    page.get_by_role("textbox", name="Email *").fill("test@gmail.com")
+    checkout_page.rellenar_email_contacto()
     print ("Rellena la dirección 'Calle Aragón, 25, Madrid'")
-    page.get_by_role("textbox", name="Dirección *").fill("Calle Aragón, 25, Madrid")
+    checkout_page.rellenar_direccion_contacto()
     print ("Rellena el número de la tarjeta '4242 4242 4242 4242'")
-    page.get_by_role("textbox", name="Número de Tarjeta de Crédito *").fill("4242424242424242")
+    checkout_page.añadir_tarjeta_valida
     print ("Hace clic en completar compra")
-    page.get_by_role("button", name="Completar Compra").click()
+    checkout_page.completar_click_compra
+
     print ("Comprueba el resumen del pedido completado confirmando el mensaje de '¡Compra realizada con éxito!'")
-    expect(page.get_by_role("heading", name="¡Compra Realizada con Éxito!")).to_be_visible()
-
+    confirmation_page.verificar_compra_realizada()
     print("Ve el producto 'Juego de palas' por valor '15,99€'")
-    expect(page.get_by_text("Juego de Palas15.99 €")).to_be_visible()
+    confirmation_page.verificar_producto_y_valor()
     print("Ve el IVA '3,36€'")
-    expect(page.get_by_text("IVA (21%)3.36 €")).to_be_visible()
+    confirmation_page.verificar_IVA()
     print("Ve el envío '5€'")
-    expect(page.get_by_text("Envío5.00 €")).to_be_visible()
+    confirmation_page.verificar_envio()
     print("Ve el total de compra por importe '24,35€'")
-    expect(page.get_by_text("Total24.35 €")).to_be_visible()    
-
-    
+    confirmation_page.verificar_total_compra()
     print ("Hace clic en 'Volver a la tienda'")
-    page.get_by_role("link", name="Volver a la Tienda").click()   
+    confirmation_page.hace_clic_volver_tienda()
+ 
     print ("Ve la URL https://web-qa.dev.adalab.es/products")
-    expect(page).to_have_url("https://web-qa.dev.adalab.es/products")
+    productos_page.abrir_productos_page()

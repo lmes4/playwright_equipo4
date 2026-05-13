@@ -64,6 +64,10 @@ class CheckoutPage:
     def verificar_error_tarjeta(self):
         expect(self.page.get_by_text("Tarjeta de credito no valida")).to_be_visible()
 
+    def añadir_tarjeta_valida(self):
+        self.page.get_by_role("textbox", name="Numero de Tarjeta de Credito *").fill("4242424242424242")
+
+
 
 
     
