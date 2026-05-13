@@ -7,7 +7,11 @@ from pages.cart_page import CartPage
 #Realizado por Lorena
 def test_compra_con_tarjeta_vacia(page: Page):
 
+<<<<<<< Updated upstream
     compra_page = CheckoutPage ()
+=======
+    checkout_page = CheckoutPage ()
+>>>>>>> Stashed changes
     productos_page = ProductosPage ()
     cart_page = CartPage ()
 
@@ -20,108 +24,108 @@ def test_compra_con_tarjeta_vacia(page: Page):
     print("And agrega el producto al carrito")
     productos_page.añadir_producto()
 
-    print("And visita la página del carrito")
+    print("And visita la pagina del carrito")
     cart_page.abrir_cart_page
 
     print("And hace click en proceder al pago")
-    compra_page.hacer_click_pago()
+    cart_page.hacer_click_pago()
 
     print("Then debe ver el resumen del pedido con")
-    compra_page.verifica_resumen_compra("Resumen del pedido")
+    checkout_page.verifica_resumen_compra("Resumen del pedido")
 
     print("then debe ver el producto “juego de palas”")
-    compra_page.verificar_producto_compra("Juego de Palas")
+    checkout_page.verificar_producto_compra("Juego de Palas")
 
     print("then debe ver precio del producto “15.99”")
-    compra_page.verificar_precio_compra("15.99")
+    checkout_page.verificar_precio_compra("15.99")
 
     print("then debe ver el subtotal “15.99”")
-    compra_page.verificar_subtotal_compra("15.99")
+    checkout_page.verificar_subtotal_compra("15.99")
 
     print("then debe ver el IVA “3.36”")
-    compra_page.verificar_iva_compra("3.36")
+    checkout_page.verificar_iva_compra("3.36")
 
     print("then debe ver el envio “5”")
-    compra_page.verificar_envio_compra("5")
+    checkout_page.verificar_envio_compra("5")
 
     print("and debe ver el total “24”")
-    compra_page.verificar_total_compra("24")
+    checkout_page.verificar_total_compra("24")
 
     print("When rellena el campo de nombre válido “Maria Diaz”")
-    compra_page.rellenar_nombre_contacto("Maria Diaz")
+    checkout_page.rellenar_nombre_contacto("Maria Diaz")
 
     print("And rellena el campo email válido “test@gmail.com”")
-    compra_page.rellenar_email_contacto("test@gmail.com")
+    checkout_page.rellenar_email_contacto("test@gmail.com")
 
     print("And rellena la direccion valida “Calle Aragon, 25, Madrid”")
-    compra_page.rellenar_direccion_contacto("Calle Aragon 25 Madrid")
+    checkout_page.rellenar_direccion_contacto("Calle Aragon 25 Madrid")
 
     print("And hace click en completar compra")
-    compra_page.completar_click_compra()
+    checkout_page.completar_click_compra()
 
     print("Then el usuario permanece en la página de check out Finalizar Compra | Vida Verde ")
-    compra_page.visualizar_checkout_compra
+    checkout_page.visualizar_checkout_compra
 
 #Realizado por Lorena
 def test_compra_con_tarjeta_invalida(page: Page):
     
-    compra_page = CompraPage ()
+    checkout_page = CheckoutPage ()
     productos_page = ProductosPage ()
     cart_page = CartPage ()
 
-    print("Given el usuario abre la página de productos Nuestros Productos | Vida Verde ")
+    print("Given el usuario abre la pagina de productos Nuestros Productos | Vida Verde ")
     productos_page.abrir_productos_page()
 
     print("When filtra por nombre “palas”")
-    compra_page.filtrar_productos_category ()
+    productos_page.filtrar_por_categoria ("palas")
 
     print("And agrega el producto al carrito")
-    compra_page.agregar_productos_carrito()
+    productos_page.añadir_producto()
 
-    print("And visita la página del carrito")
+    print("And visita la pagina del carrito")
     cart_page.abrir_cart_page
 
     print("And hace click en proceder al pago")
-    compra_page.hacer_click_pago()
+    cart_page.hacer_click_pago()
 
     print("Then debe ver el resumen del pedido con")
-    compra_page.verifica_resumen_compra("Resumen del pedido")
+    checkout_page.verifica_resumen_compra("Resumen del pedido")
 
     print("then debe ver el producto “juego de palas”")
-    compra_page.verificar_producto_compra("Juego de Palas")
+    checkout_page.verificar_producto_compra("Juego de Palas")
 
     print("then debe ver precio del producto “15.99”")
-    compra_page.verificar_precio_compra("15.99")
+    checkout_page.verificar_precio_compra("15.99")
 
     print("then debe ver el subtotal “15.99”")
-    compra_page.verificar_subtotal_compra("15.99")
+    checkout_page.verificar_subtotal_compra("15.99")
 
     print("then debe ver el IVA “3.36”")
-    compra_page.verificar_iva_compra("3.36")
+    checkout_page.verificar_iva_compra("3.36")
 
     print("then debe ver el envio “5”")
-    compra_page.verificar_envio_compra("5")
+    checkout_page.verificar_envio_compra("5")
 
     print("and debe ver el total “24”")
-    compra_page.verificar_total_compra("24")
+    checkout_page.verificar_total_compra("24")
 
-    print("When rellena el campo de nombre válido “Maria Diaz”")
-    compra_page.rellenar_nombre_contacto("Maria Diaz")
+    print("When rellena el campo de nombre valido “Maria Diaz”")
+    checkout_page.rellenar_nombre_contacto("Maria Diaz")
 
-    print("And rellena el campo email válido “test@gmail.com”")
-    compra_page.rellenar_email_contacto("test@gmail.com")
+    print("And rellena el campo email valido “test@gmail.com”")
+    checkout_page.rellenar_email_contacto("test@gmail.com")
 
     print("And rellena la direccion valida “Calle Aragon, 25, Madrid”")
-    compra_page.rellenar_direccion_contacto("Calle Aragon 25 Madrid")
+    checkout_page.rellenar_direccion_contacto("Calle Aragon 25 Madrid")
 
-    print("And añade número de tarjeta invalido “1111 4242 4242 4242”")
-    compra_page.añadir_tarjeta_invalida("1111 4242 4242 4242")
+    print("And añade numero de tarjeta invalido “1111 4242 4242 4242”")
+    checkout_page.añadir_tarjeta_invalida("1111 4242 4242 4242")
 
     print("And hace click en completar compra")
-    compra_page.completar_click_compra()
+    checkout_page.completar_click_compra()
 
     print("Then debe ver un mensaje de error en la tarjeta")
-    compra_page.verificar_error_tarjeta("Tarjeta de credito no valida")
+    checkout_page.verificar_error_tarjeta("Tarjeta de credito no valida")
 
 
     #Realizado por Eli

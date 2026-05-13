@@ -10,14 +10,17 @@ class CheckoutPage:
     def abrir_productos_page(self):
         self.page.goto(self.url)
 
-    def filtrar_productos_category(self, category):
-        self.page.get_by_role("searchbox", name="category").fill("self.articulo")
+    def filtrar_por_categoria(self, categoria): 
+        self.page.get_by_label("Categoría").select_option("Palas")
     
-    def agregar_productos_carrito(self):
-        self.page.get_by_role("button", name="Añadir Juego de Palas al").click()
-    
+    def añadir_producto(self, producto):
+        self.page.get_by_role("button", name=f"Añadir {"Juego de Palas al"} al carrito").click()
 
+    def abrir_cart_page(self):
+        self.page.goto(self.url)
 
+    def hacer_click_pago(self):
+        self.page.get_by_role("link", name="Proceder al Pago").click()
 
     def verifica_resumen_compra(self,name):
         expect(self.page.get_by_role("heading", name="Resumen del Pedido")).to_be_visible()
