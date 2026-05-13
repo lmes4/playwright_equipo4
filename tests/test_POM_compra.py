@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from pages.checkout_page import CompraPage
+from pages.checkout_page import CheckoutPage
 from pages.productos_page import ProductosPage
 from pages.cart_page import CartPage
 
@@ -7,7 +7,7 @@ from pages.cart_page import CartPage
 #Realizado por Lorena
 def test_compra_con_tarjeta_vacia(page: Page):
 
-    compra_page = CompraPage ()
+    compra_page = CheckoutPage ()
     productos_page = ProductosPage ()
     cart_page = CartPage ()
 
@@ -15,10 +15,10 @@ def test_compra_con_tarjeta_vacia(page: Page):
     productos_page.abrir_productos_page()
 
     print("When filtra por nombre “palas”")
-    compra_page.filtrar_productos_category ("palas")
+    productos_page.filtrar_por_categoria ("palas")
 
     print("And agrega el producto al carrito")
-    compra_page.agregar_productos_carrito()
+    productos_page.añadir_producto()
 
     print("And visita la página del carrito")
     cart_page.abrir_cart_page
@@ -129,7 +129,7 @@ def test_compra_datos_validos (page: Page):
 
     productos_page = ProductosPage ()
     cart_page = CartPage ()
-    compra_page = CompraPage ()
+    checkout_page = CheckoutPage ()
 
 
     print ("Ve la URL https://web-qa.dev.adalab.es/products")
