@@ -7,11 +7,7 @@ from pages.cart_page import CartPage
 #Realizado por Lorena
 def test_compra_con_tarjeta_vacia(page: Page):
 
-<<<<<<< Updated upstream
-    compra_page = CheckoutPage ()
-=======
     checkout_page = CheckoutPage ()
->>>>>>> Stashed changes
     productos_page = ProductosPage ()
     cart_page = CartPage ()
 
