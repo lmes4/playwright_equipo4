@@ -1,7 +1,9 @@
 from playwright.sync_api import Page, expect
 from pages.about_us_pages import AboutusPage
 from pages.components.menu import Menu
+from pages.contact_page import ContactPage
 from pages.home_page import HomePage
+from pages.productos_page import ProductosPage
 
 
 
@@ -9,8 +11,10 @@ from pages.home_page import HomePage
 def test_visitar_los_enlaces_del_menú(page: Page):
 
     home_page = HomePage(page)
-    menu = Menu()
+    menu = Menu(page)
     about_us_page = AboutusPage(page)
+    productos_page = ProductosPage (page)
+    contact_page = ContactPage (page)
 
     print("Cuando el usuario abre la página Inicio | Vida Verde “https://web-qa.dev.adalab.es”")
     home_page.abrir_pagina_inicio()
@@ -18,38 +22,32 @@ def test_visitar_los_enlaces_del_menú(page: Page):
     print ("Ve el título 'Vida Verde'")
     home_page.verificar_pagina_inicio()
 
+
     print ("Hace click en 'Quiénes Somos'")
     menu.abrir_menu_quienes_somos()
 
     print ("Ve el título 'Quiénes Somos'")
     about_us_page.verificar_titulo_quienes_somos()
 
-
-
-
-
     print ("Ve la URL https://web-qa.dev.adalab.es/about")
-    expect(page).to_have_url("https://web-qa.dev.adalab.es/about")
-
-
-
-
+    about_us_page.comprobar_pagina_quienes_somos()
 
 
     print ("Hace click en 'Productos'")
-    page.get_by_role("link", name="Productos").click()
+    menu.abrir_menu_productos()
 
     print ("Ve el título 'Catálogo de Productos'")
-    expect(page.get_by_role("heading", name="Catálogo de Productos")).to_be_visible()
+    productos_page.verificar_productos_title()
 
     print ("Ve la URL https://web-qa.dev.adalab.es/products")
-    expect(page).to_have_url("https://web-qa.dev.adalab.es/products")
+    productos_page.verificar_productos_url()
+
 
     print ("Hace click en 'Contacto'")
-    page.get_by_role("link", name="Contacto").click()
+    menu.abrir_menu_contactos()
 
     print ("Ve el título 'Contáctanos'")
-    expect(page.get_by_role("heading", name="Contáctanos")).to_be_visible()
+    contact_page.verificar_titulo_contacto()
 
     print ("Ve la URL https://web-qa.dev.adalab.es/contact")
-    expect(page).to_have_url("https://web-qa.dev.adalab.es/contact")
+    contact_page.verificar_contacto_url()

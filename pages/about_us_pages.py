@@ -10,5 +10,5 @@ class AboutusPage:
     def verificar_titulo_quienes_somos (self):
         expect(self.page.get_by_role("heading", name=self.titulo)).to_be_visible()
 
-    def abrir_pagina_quienes_somos (self):
+    def comprobar_pagina_quienes_somos (self):
         self.page.goto(self.url)

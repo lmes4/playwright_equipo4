@@ -5,9 +5,16 @@ class ContactPage:
     def __init__(self, page: Page):
         self.page = page
         self.url = "https://web-qa.dev.adalab.es/contact"
+        self.titulo = "Contáctanos"
 
     def abrir_pagina_contactos (self):
         self.page.goto(self.url)
+
+    def verificar_titulo_contacto (self):
+        expect(self.page.get_by_role("heading", name=self.titulo)).to_be_visible()
+
+    def verificar_contacto_url (self):
+        expect(self.page).to_have_url(self.url)
 
     def rellenar_nombre_contacto (self, name):
         self.page.get_by_role("textbox", name="Nombre *").fill(name)
