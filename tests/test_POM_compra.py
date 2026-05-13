@@ -122,3 +122,6 @@ def test_compra_con_tarjeta_invalida(page: Page):
 
     print("Then debe ver un mensaje de error en la tarjeta")
     compra_page.verificar_error_tarjeta("Tarjeta de credito no valida")
+
+
+    
