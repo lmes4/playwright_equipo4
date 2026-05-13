@@ -18,7 +18,7 @@ def test_enviar_formulario_con_campos_obligatorios_validos(page: Page):
     print("And rellena el mensaje")
     contact_page.rellena_mensaje_contacto("test mensaje")
 
-    print("And pulsa el boton enviar")
+    print("And pulsa el botón enviar")
     contact_page.hace_click_enviar()
 
     print("Then debería ver un mensaje de éxito")
@@ -70,7 +70,7 @@ def test_enviar_formulario_con_campo_obligatorio_email_invalido(page: Page):
 def test_enviar_formulario_con_campo_obligatorio_mensaje_vacio(page: Page):
     contact_page = ContactPage (page)
     
-    print("Given la usuaria abre la pagina de contacto: Contáctanos | Vida Verde")
+    print("Given la usuaria abre la página de contacto: Contáctanos | Vida Verde")
     contact_page.abrir_pagina_contactos()
     
     print("When rellena el campo obligatorio nombre")

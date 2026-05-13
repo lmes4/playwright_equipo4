@@ -21,7 +21,7 @@ def test_compra_con_tarjeta_vacia(page: Page):
     print("And agrega el producto al carrito")
     productos_page.añadir_producto()
 
-    print("And visita la pagina del carrito")
+    print("And visita la página del carrito")
     cart_page.abrir_cart_page
 
     print("And hace click en proceder al pago")
@@ -42,7 +42,7 @@ def test_compra_con_tarjeta_vacia(page: Page):
     print("then debe ver el IVA “3.36”")
     checkout_page.verificar_iva_compra("3.36")
 
-    print("then debe ver el envio “5”")
+    print("then debe ver el envío “5”")
     checkout_page.verificar_envio_compra("5")
 
     print("and debe ver el total “24”")
@@ -54,7 +54,7 @@ def test_compra_con_tarjeta_vacia(page: Page):
     print("And rellena el campo email válido “test@gmail.com”")
     checkout_page.rellenar_email_contacto("test@gmail.com")
 
-    print("And rellena la direccion valida “Calle Aragon, 25, Madrid”")
+    print("And rellena la direccion válida “Calle Aragón, 25, Madrid”")
     checkout_page.rellenar_direccion_contacto("Calle Aragon 25 Madrid")
 
     print("And hace click en completar compra")
@@ -70,7 +70,7 @@ def test_compra_con_tarjeta_invalida(page: Page):
     productos_page = ProductosPage (page)
     cart_page = CartPage (page)
 
-    print("Given el usuario abre la pagina de productos Nuestros Productos | Vida Verde ")
+    print("Given el usuario abre la página de productos Nuestros Productos | Vida Verde ")
     productos_page.abrir_productos_page()
 
     print("When filtra por nombre “palas”")
@@ -79,7 +79,7 @@ def test_compra_con_tarjeta_invalida(page: Page):
     print("And agrega el producto al carrito")
     productos_page.añadir_producto()
 
-    print("And visita la pagina del carrito")
+    print("And visita la página del carrito")
     cart_page.abrir_cart_page
 
     print("And hace click en proceder al pago")
@@ -100,7 +100,7 @@ def test_compra_con_tarjeta_invalida(page: Page):
     print("then debe ver el IVA “3.36”")
     checkout_page.verificar_iva_compra("3.36")
 
-    print("then debe ver el envio “5”")
+    print("then debe ver el envío “5”")
     checkout_page.verificar_envio_compra("5")
 
     print("and debe ver el total “24”")
@@ -109,20 +109,20 @@ def test_compra_con_tarjeta_invalida(page: Page):
     print("When rellena el campo de nombre valido “Maria Diaz”")
     checkout_page.rellenar_nombre_contacto("Maria Diaz")
 
-    print("And rellena el campo email valido “test@gmail.com”")
+    print("And rellena el campo email válido “test@gmail.com”")
     checkout_page.rellenar_email_contacto("test@gmail.com")
 
-    print("And rellena la direccion valida “Calle Aragon, 25, Madrid”")
+    print("And rellena la direccion válida “Calle Aragon, 25, Madrid”")
     checkout_page.rellenar_direccion_contacto("Calle Aragon 25 Madrid")
 
-    print("And añade numero de tarjeta invalido “1111 4242 4242 4242”")
+    print("And añade número de tarjeta inválido “1111 4242 4242 4242”")
     checkout_page.añadir_tarjeta_invalida("1111 4242 4242 4242")
 
     print("And hace click en completar compra")
     checkout_page.completar_click_compra()
 
     print("Then debe ver un mensaje de error en la tarjeta")
-    checkout_page.verificar_error_tarjeta("Tarjeta de credito no valida")
+    checkout_page.verificar_error_tarjeta("Tarjeta de crédito no válida")
 
 
     #Realizado por Eli

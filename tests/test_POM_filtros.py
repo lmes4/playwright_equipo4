@@ -7,7 +7,7 @@ from pages.productos_page import ProductosPage
 def test_filtrar_nombre_categoria_precio_valido(page: Page):
     productos_page= ProductosPage(page)
 
-    print("Given: La usuaria abre la página de productos?Via Verde")
+    print("Given: La usuaria abre la página de productos | Vida Verde")
     productos_page.abrir_productos_page()
 
     print("When: La usuaria filtra por nombre 'Regadera'")
