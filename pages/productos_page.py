@@ -47,10 +47,12 @@ class ProductosPage:
 
     def verificar_productos_price(self,price):
         expect(self.page.get_by_text(price)).to_be_visible()
+        
 
     def verificar_productos_title(self):
         expect(self.page.locator("h1")).to_contain_text(self.title)
 
+#añadido Eli
     def verificar_productos_url(self):
         expect(self.page).to_have_url(self.url)
 

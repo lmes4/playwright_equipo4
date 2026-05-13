@@ -30,7 +30,7 @@ def test_visitar_los_enlaces_del_menú(page: Page):
     about_us_page.verificar_titulo_quienes_somos()
 
     print ("Ve la URL https://web-qa.dev.adalab.es/about")
-    about_us_page.comprobar_pagina_quienes_somos()
+    about_us_page.verificar_quienes_somos_url()
 
 
     print ("Hace click en 'Productos'")

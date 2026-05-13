@@ -30,4 +30,3 @@ class ContactPage:
 
     def verifica_mensaje (self, texto):
         expect(self.page.get_by_text(texto)).to_be_visible()
-    
