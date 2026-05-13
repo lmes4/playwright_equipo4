@@ -144,7 +144,7 @@ def test_compra_datos_validos (page: Page):
     cart_page.hacer_click_pago()
 
     print ("Comprueba el 'Resumen del pedido'")
-    compra_page.
+    checkpout_page.ver
     expect(page.get_by_role("heading", name="Resumen del Pedido")).to_be_visible()
 
 
