@@ -8,9 +8,9 @@ from pages.cart_page import CartPage
 #Realizado por Lorena
 def test_compra_con_tarjeta_vacia(page: Page):
 
-    checkout_page = CheckoutPage ()
-    productos_page = ProductosPage ()
-    cart_page = CartPage ()
+    checkout_page = CheckoutPage (page)
+    productos_page = ProductosPage (page)
+    cart_page = CartPage (page)
 
     print("Given el usuario abre la página de productos Nuestros Productos | Vida Verde ")
     productos_page.abrir_productos_page()
@@ -66,15 +66,15 @@ def test_compra_con_tarjeta_vacia(page: Page):
 #Realizado por Lorena
 def test_compra_con_tarjeta_invalida(page: Page):
     
-    checkout_page = CheckoutPage ()
-    productos_page = ProductosPage ()
-    cart_page = CartPage ()
+    checkout_page = CheckoutPage (page)
+    productos_page = ProductosPage (page)
+    cart_page = CartPage (page)
 
     print("Given el usuario abre la pagina de productos Nuestros Productos | Vida Verde ")
     productos_page.abrir_productos_page()
 
     print("When filtra por nombre “palas”")
-    productos_page.filtrar_por_categoria ("palas")
+    productos_page.filtrar_por_categoria ()
 
     print("And agrega el producto al carrito")
     productos_page.añadir_producto()
@@ -128,16 +128,16 @@ def test_compra_con_tarjeta_invalida(page: Page):
     #Realizado por Eli
 def test_compra_datos_validos (page: Page):
 
-    productos_page = ProductosPage ()
-    cart_page = CartPage ()
-    checkout_page = CheckoutPage ()
-    confirmation_page = ConfirmationPage ()
+    productos_page = ProductosPage (page)
+    cart_page = CartPage (page)
+    checkout_page = CheckoutPage (page)
+    confirmation_page = ConfirmationPage (page)
 
 
     print ("Ve la URL https://web-qa.dev.adalab.es/products")
-    productos_page.abrir_productos_page
+    productos_page.abrir_productos_page()
     print ("Filtra por nombre de producto 'Palas'")
-    productos_page.filtrar_por_categoria()
+    productos_page.filtrar_por_categoria("Palas")
     print ("Añade el artículo 'Juego de Palas'")
     productos_page.añadir_producto()
     print ("Visita la página del carrito")
@@ -164,9 +164,9 @@ def test_compra_datos_validos (page: Page):
     print ("Rellena la dirección 'Calle Aragón, 25, Madrid'")
     checkout_page.rellenar_direccion_contacto()
     print ("Rellena el número de la tarjeta '4242 4242 4242 4242'")
-    checkout_page.añadir_tarjeta_valida
+    checkout_page.añadir_tarjeta_valida()
     print ("Hace clic en completar compra")
-    checkout_page.completar_click_compra
+    checkout_page.completar_click_compra()
 
     print ("Comprueba el resumen del pedido completado confirmando el mensaje de '¡Compra realizada con éxito!'")
     confirmation_page.verificar_compra_realizada()
