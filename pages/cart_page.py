@@ -50,5 +50,9 @@ class CartPage:
     def ir_a_checkout(self):
         self.page.get_by_role("button", name="Finalizar compra").click()
 
+
+#Realizado Lorena y Eli ❤️
+    def hacer_click_pago(self):
+        self.page.get_by_role("link", name="Proceder al Pago").click()
     
     

@@ -1,23 +1,23 @@
 from playwright.sync_api import Page, expect
 #Realizado por Lorena
-class CompraPage:
+class CheckoutPage:
 
     def __init__(self, page: Page):
         self.page = page
-        self.url = 'https://web-qa.dev.adalab.es/products'
-        self.title = "Compra"
+        self.url = 'https://web-qa.dev.adalab.es/checkout'
+        self.articulo = "palas"
 
     def abrir_productos_page(self):
         self.page.goto(self.url)
 
     def filtrar_productos_category(self, category):
-        self.page.get_by_role("searchbox", name="category").fill("palas")
+        self.page.get_by_role("searchbox", name="category").fill("self.articulo")
     
     def agregar_productos_carrito(self):
         self.page.get_by_role("button", name="Añadir Juego de Palas al").click()
     
-    def hacer_click_pago(self):
-        self.page.get_by_role("link", name="Proceder al Pago").click()
+
+
 
     def verifica_resumen_compra(self,name):
         expect(self.page.get_by_role("heading", name="Resumen del Pedido")).to_be_visible()

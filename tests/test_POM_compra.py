@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from pages.compra_page import CompraPage
+from pages.checkout_page import CompraPage
 from pages.productos_page import ProductosPage
 from pages.cart_page import CartPage
 
@@ -73,7 +73,7 @@ def test_compra_con_tarjeta_invalida(page: Page):
     productos_page.abrir_productos_page()
 
     print("When filtra por nombre “palas”")
-    compra_page.filtrar_productos_category ("palas")
+    compra_page.filtrar_productos_category ()
 
     print("And agrega el producto al carrito")
     compra_page.agregar_productos_carrito()
@@ -124,4 +124,63 @@ def test_compra_con_tarjeta_invalida(page: Page):
     compra_page.verificar_error_tarjeta("Tarjeta de credito no valida")
 
 
+    #Realizado por Eli
+def test_compra_datos_validos (page: Page):
+
+    productos_page = ProductosPage ()
+    cart_page = CartPage ()
+    compra_page = CompraPage ()
+
+
+    print ("Ve la URL https://web-qa.dev.adalab.es/products")
+    productos_page.abrir_productos_page
+    print ("Filtra por nombre de producto 'Palas'")
+    productos_page.filtrar_por_categoria()
+    print ("Añade el artículo 'Juego de Palas'")
+    productos_page.añadir_producto()
+    print ("Visita la página del carrito")
+    cart_page.abrir_cart_page()
+    print ("Hace clic en proceder al pago")
+    cart_page.hacer_click_pago()
+
+    print ("Comprueba el 'Resumen del pedido'")
+    compra_page.
+    expect(page.get_by_role("heading", name="Resumen del Pedido")).to_be_visible()
+
+
+    print("Ve el producto 'Juego de palas'")
+    expect(page.get_by_text("Juego de Palas15.99 €")).to_be_visible()
+    print("Ve el IVA '3,36€'")
+    expect(page.get_by_text("IVA (21%)3.36 €")).to_be_visible()
+    print("Ve el envío '5€'")
+    expect(page.get_by_text("Envío5.00 €")).to_be_visible()
+    print("Ve el total de compra por importe '24,35€'")
+    expect(page.get_by_text("Total24.35 €")).to_be_visible()
+
+    print ("Rellena el nombre 'Marta Díaz'")
+    page.get_by_role("textbox", name="Nombre Completo *").fill("Marta Díaz")
+    print ("Rellena el email 'test@gmail.com'")
+    page.get_by_role("textbox", name="Email *").fill("test@gmail.com")
+    print ("Rellena la dirección 'Calle Aragón, 25, Madrid'")
+    page.get_by_role("textbox", name="Dirección *").fill("Calle Aragón, 25, Madrid")
+    print ("Rellena el número de la tarjeta '4242 4242 4242 4242'")
+    page.get_by_role("textbox", name="Número de Tarjeta de Crédito *").fill("4242424242424242")
+    print ("Hace clic en completar compra")
+    page.get_by_role("button", name="Completar Compra").click()
+    print ("Comprueba el resumen del pedido completado confirmando el mensaje de '¡Compra realizada con éxito!'")
+    expect(page.get_by_role("heading", name="¡Compra Realizada con Éxito!")).to_be_visible()
+
+    print("Ve el producto 'Juego de palas' por valor '15,99€'")
+    expect(page.get_by_text("Juego de Palas15.99 €")).to_be_visible()
+    print("Ve el IVA '3,36€'")
+    expect(page.get_by_text("IVA (21%)3.36 €")).to_be_visible()
+    print("Ve el envío '5€'")
+    expect(page.get_by_text("Envío5.00 €")).to_be_visible()
+    print("Ve el total de compra por importe '24,35€'")
+    expect(page.get_by_text("Total24.35 €")).to_be_visible()    
+
     
+    print ("Hace clic en 'Volver a la tienda'")
+    page.get_by_role("link", name="Volver a la Tienda").click()   
+    print ("Ve la URL https://web-qa.dev.adalab.es/products")
+    expect(page).to_have_url("https://web-qa.dev.adalab.es/products")
