@@ -72,19 +72,19 @@ def test_enviar_formulario_con_campo_obligatorio_mensaje_vacio(page: Page):
     contact_page = ContactPage ()
     
     print("Given la usuaria abre la pagina de contacto: Contáctanos | Vida Verde")
-    page.goto("https://web-qa.dev.adalab.es/contact")
+    contact_page.abrir_pagina_contactos()
     
     print("When rellena el campo obligatorio nombre")
-    page.get_by_role("textbox", name="Nombre *").fill("Marta Díaz")
+    contact_page.rellenar_nombre_contacto("Marta Díaz")
     
     print("And rellena el campo obligatorio email")
-    page.get_by_role("textbox", name="Email *").fill("test@gmail.com")
+    contact_page.rellena_email_contacto("test@gmail.com")
     
     print("And pulsa enviar")
-    page.get_by_role("button", name="Enviar Mensaje").click()
+    contact_page.hace_click_enviar()
     
     print("Then se muestra el mensaje de error: El mensaje es obligatorio")
-    expect(page.get_by_text("El mensaje es obligatorio")).to_be_visible()
+    contact_page.verifica_mensaje("El mensaje es obligatorio")
     
 
 # Realizado por Ana
