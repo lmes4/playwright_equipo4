@@ -46,7 +46,7 @@ def test_form_with_required_name_field_left_empty(page: Page):
 #Realizado por Elisabet
 def test_enviar_formulario_con_campo_obligatorio_email_invalido(page: Page):
 
-    contact_page = ContactPage ()
+    contact_page = ContactPage (page)
 
     print ("Given el usuario entra en la página de contacto Contáctanos | Vida Verde “https://web-qa.dev.adalab.es/contact”)")
     contact_page.abrir_pagina_contactos()
@@ -68,7 +68,7 @@ def test_enviar_formulario_con_campo_obligatorio_email_invalido(page: Page):
 
 #Realizado por Lorena
 def test_enviar_formulario_con_campo_obligatorio_mensaje_vacio(page: Page):
-    contact_page = ContactPage ()
+    contact_page = ContactPage (page)
     
     print("Given la usuaria abre la pagina de contacto: Contáctanos | Vida Verde")
     contact_page.abrir_pagina_contactos()
