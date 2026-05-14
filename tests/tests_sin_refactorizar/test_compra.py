@@ -64,18 +64,6 @@ def test_compra_datos_validos (page: Page):
     page.get_by_role("link", name="Carrito de compra").click()
     print ("Hace clic en proceder al pago")
     page.get_by_role("link", name="Proceder al Pago").click()
-
-    print ("Comprueba el 'Resumen del pedido'")
-    expect(page.get_by_role("heading", name="Resumen del Pedido")).to_be_visible()
-    print("Ve el producto 'Juego de palas'")
-    expect(page.get_by_text("Juego de Palas15.99 €")).to_be_visible()
-    print("Ve el IVA '3,36€'")
-    expect(page.get_by_text("IVA (21%)3.36 €")).to_be_visible()
-    print("Ve el envío '5€'")
-    expect(page.get_by_text("Envío5.00 €")).to_be_visible()
-    print("Ve el total de compra por importe '24,35€'")
-    expect(page.get_by_text("Total24.35 €")).to_be_visible()
-
     print ("Rellena el nombre 'Marta Díaz'")
     page.get_by_role("textbox", name="Nombre Completo *").fill("Marta Díaz")
     print ("Rellena el email 'test@gmail.com'")

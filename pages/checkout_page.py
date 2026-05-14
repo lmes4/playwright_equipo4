@@ -19,9 +19,6 @@ class CheckoutPage:
     def abrir_cart_page(self):
         self.page.goto(self.url)
 
-    def hacer_click_pago(self):
-        self.page.get_by_role("link", name="Proceder al Pago").click()
-
     def verifica_resumen_compra(self,name):
         expect(self.page.get_by_role("heading", name="Resumen del Pedido")).to_be_visible()
 
@@ -42,6 +39,9 @@ class CheckoutPage:
 
     def verificar_total_compra(self):
         expect(self.page.get_by_text("24.35 €")).to_be_visible()
+
+    def hacer_click_pago(self):
+        self.page.get_by_role("link", name="Proceder al Pago").click()
 
     def rellenar_nombre_contacto (self, name):
         self.page.get_by_role("textbox", name="Nombre Completo *").fill("Maria Diaz")
