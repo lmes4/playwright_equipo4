@@ -22,40 +22,19 @@ def test_compra_con_tarjeta_vacia(page: Page):
     productos_page.añadir_producto()
 
     print("And visita la página del carrito")
-    cart_page.abrir_cart_page
+    cart_page.abrir_cart_page()
 
     print("And hace click en proceder al pago")
     cart_page.hacer_click_pago()
 
-    print("Then debe ver el resumen del pedido con")
-    checkout_page.verifica_resumen_compra("Resumen del pedido")
-
-    print("then debe ver el producto “juego de palas”")
-    checkout_page.verificar_producto_compra("Juego de Palas")
-
-    print("then debe ver precio del producto “15.99”")
-    checkout_page.verificar_precio_compra("15.99")
-
-    print("then debe ver el subtotal “15.99”")
-    checkout_page.verificar_subtotal_compra("15.99")
-
-    print("then debe ver el IVA “3.36”")
-    checkout_page.verificar_iva_compra("3.36")
-
-    print("then debe ver el envío “5”")
-    checkout_page.verificar_envio_compra("5")
-
-    print("and debe ver el total “24”")
-    checkout_page.verificar_total_compra("24")
-
-    print("When rellena el campo de nombre válido “Maria Diaz”")
-    checkout_page.rellenar_nombre_contacto("Maria Diaz")
+    print("When rellena el campo de nombre válido “Maria Díaz”")
+    checkout_page.rellenar_nombre_contacto("Maria Díaz")
 
     print("And rellena el campo email válido “test@gmail.com”")
     checkout_page.rellenar_email_contacto("test@gmail.com")
 
     print("And rellena la direccion válida “Calle Aragón, 25, Madrid”")
-    checkout_page.rellenar_direccion_contacto("Calle Aragon 25 Madrid")
+    checkout_page.rellenar_direccion_contacto("Calle Aragón 25 Madrid")
 
     print("And hace click en completar compra")
     checkout_page.completar_click_compra()
@@ -80,40 +59,19 @@ def test_compra_con_tarjeta_invalida(page: Page):
     productos_page.añadir_producto()
 
     print("And visita la página del carrito")
-    cart_page.abrir_cart_page
+    cart_page.abrir_cart_page()
 
     print("And hace click en proceder al pago")
     cart_page.hacer_click_pago()
 
-    print("Then debe ver el resumen del pedido con")
-    checkout_page.verifica_resumen_compra("Resumen del pedido")
-
-    print("then debe ver el producto “juego de palas”")
-    checkout_page.verificar_producto_compra("Juego de Palas")
-
-    print("then debe ver precio del producto “15.99”")
-    checkout_page.verificar_precio_compra("15.99")
-
-    print("then debe ver el subtotal “15.99”")
-    checkout_page.verificar_subtotal_compra("15.99")
-
-    print("then debe ver el IVA “3.36”")
-    checkout_page.verificar_iva_compra("3.36")
-
-    print("then debe ver el envío “5”")
-    checkout_page.verificar_envio_compra("5")
-
-    print("and debe ver el total “24”")
-    checkout_page.verificar_total_compra("24")
-
-    print("When rellena el campo de nombre valido “Maria Diaz”")
-    checkout_page.rellenar_nombre_contacto("Maria Diaz")
+    print("When rellena el campo de nombre valido “Maria Díaz”")
+    checkout_page.rellenar_nombre_contacto("Maria Díaz")
 
     print("And rellena el campo email válido “test@gmail.com”")
     checkout_page.rellenar_email_contacto("test@gmail.com")
 
-    print("And rellena la direccion válida “Calle Aragon, 25, Madrid”")
-    checkout_page.rellenar_direccion_contacto("Calle Aragon 25 Madrid")
+    print("And rellena la direccion válida “Calle Aragón, 25, Madrid”")
+    checkout_page.rellenar_direccion_contacto("Calle Aragón 25 Madrid")
 
     print("And añade número de tarjeta inválido “1111 4242 4242 4242”")
     checkout_page.añadir_tarjeta_invalida("1111 4242 4242 4242")

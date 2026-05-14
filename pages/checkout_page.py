@@ -49,7 +49,7 @@ class CheckoutPage:
     def rellenar_email_contacto (self, email):
         self.page.get_by_role("textbox", name="Email *").fill("test@gmail.com")
 
-    def rellenar_direccion_contacto (self, direccion):
+    def rellenar_direccion_contacto (self, name):
         self.page.get_by_role("textbox", name="Dirección *").fill("Calle Aragón, 25, Madrid")
 
     def completar_click_compra(self):
