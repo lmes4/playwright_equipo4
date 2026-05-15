@@ -23,7 +23,7 @@ def test_filtrar_nombre_categoria_precio_valido(page: Page):
     productos_page.filtrar_por_precio_maximo("25")
 
     print("Then debe ver el producto 'Regadera Metálica'")
-    productos_page.verificar_producto_visible("Regadera Metalica")
+    productos_page.verificar_producto_visible("Regadera Metálica")
 
 
  

@@ -22,7 +22,7 @@ def test_enviar_formulario_con_campos_obligatorios_validos(page: Page):
     contact_page.hace_click_enviar()
 
     print("Then debería ver un mensaje de éxito")
-    contact_page.verifica_mensaje("¡Mensaje enviado con exito!")
+    contact_page.verifica_mensaje("¡Mensaje enviado con éxito!")
 
 #Realizado por Jenniffer
 def test_form_with_required_name_field_left_empty(page: Page):
