@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://bootcamp-qa.github.io/ReportGenerator/testreport.html -->
+<html lang="es" class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de la prueba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .upload-section {
+            margin-bottom: 20px;
+        }
+        .feature-title {
+            margin-top: 40px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .status-passed {
+            background-color: #d4edda; /* Light green */
+            color: #155724;
+        }
+        .status-failed {
+            background-color: #f8d7da; /* Light red */
+            color: #721c24;
+        }
+        .status-notrun {
+            background-color: #fff3cd; /* Light yellow */
+            color: #856404;
+        }
+    </style>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./testresults_files/m=el_main_css"></head>
+<body>
+    <div class="container">
+        <h1><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Generador de informes de prueba</font></font></h1>
+        <div class="upload-section">
+            <label for="csvFile"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Subir archivo CSV:</font></font></label>
+            <input type="file" id="csvFile" accept=".csv">
+        </div>
+        <div id="reportContainer"><div class="feature-title"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">E4QA-5 - Menú de navegación</font></font></div><table>
+                    <thead>
+                        <tr>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Característica</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Guión</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Pasos</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Resultado de la prueba</font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Menú de navegación</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Navegar correctamente desde el menú</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en cualquier página del sitio </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando hace clic en "&lt;enlace&gt;" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe ser redirigido a la sección "&lt;seccion&gt;" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y debe seguir viendo el menú </font></font><br><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ejemplos: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | enlace | sección | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | Inicio | Página Inicio | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | Quiénes Somos | Quiénes Somos | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | Productos | Productos | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | Contacto | Contacto |</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                    </tbody>
+                </table><div class="feature-title"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">E4QA-6 - Página de inicio</font></font></div><table>
+                    <thead>
+                        <tr>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Característica</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Guión</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Pasos</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Resultado de la prueba</font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Página de Inicio</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ver una página de Inicio</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando el usuario accede a la Página de Inicio </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Then debe visualizar el título o logo de la tienda </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And debe visualizar una descripción de la tienda </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And debe visualizar una imagen/fotografía representativa de la tienda</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Página de Inicio</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Acceder a la página de productos desde Inicio</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la Página de Inicio </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando el usuario hace clic en el botón de productos. </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces el sistema debe redirigir a la página de productos.</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                    </tbody>
+                </table><div class="feature-title"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">E4QA-7 - Filtros de productos</font></font></div><table>
+                    <thead>
+                        <tr>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Característica</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Guión</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Pasos</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Resultado de la prueba</font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtros de productos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtrar por nombre válido</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y en el apartado de "Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando introduzca un texto válido en el filtro por &lt;nombre&gt; </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe ver todos los productos cuyo nombre contenga el texto introducido </font></font><br><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ejemplos: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| nombre | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| maceta | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| regadera|</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtros de productos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtrar por valor inválido y ver mensaje</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y en el apartado de "Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando aplica un filtro en el &lt;campo&gt; con &lt;Valor&gt; inválido </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe ver un mensaje informativo </font></font><br><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ejemplos: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| campo | valor | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| nombre | 1256 | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| precio mínimo | -3 | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| precio máximo |+5800|</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtros de productos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtro por precio mínimo válido</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y en el apartado de "Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando añade un valor en el filtro de precio mínimo "10" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe ver todos los productos con precio mayor o igual al valor introducido</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtros de productos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtrar por precio máximo válido</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y en el apartado de "Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando añade un valor en el filtro de precio máximo "30" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe ver todos los productos cuyo precio menor o igual al valor introducido</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtros de productos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtrar por rango de precio válido</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y en el apartado de "Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando añade un valor en el filtro de precio mínimo "10" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y añade un valor en el filtro de precio máximo "30" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe ver todos los productos cuyo precio se encuentre dentro de ese rango</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtros de productos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Visualización sin filtros</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando acceda al apartado de "Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe ver por defecto la lista completa de todos los productos </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y no debe ofrecer la opción de "quitar filtros" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y no debe haber filtros aplicados</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtros de productos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtro por categoría</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y en el apartado de "Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando introduzca un filtro por &lt;categoría&gt; </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe ver todos los productos cuya categoría sea la indicada </font></font><br><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ejemplos: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">|categoría| </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">|plantas| </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">|herramientas| </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">|macetas|</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtros de productos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Quitar filtros</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y en el apartado de "Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y tiene aplicado al menos uno de los filtros </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando selecciona la casilla de "Quitar filtros" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe eliminarse todos los filtros aplicados </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y debe ver la lista completa de los productos </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y debe desaparecer la opción de "Quitar filtros"</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtros de productos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Visualización de mensaje rango inválido</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">y en el apartado de "Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando aplica el filtro de un &lt;precio mínimo&gt; y un &lt;precio máximo&gt; </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Then debe ver un mensaje informativo </font></font><br><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ejemplos: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">|precio mínimo| precio maximo | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| -10 | 1 | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| un | 50 |</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Filtros de productos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Visualización de filtros combinados</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y en el apartado de "Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando introduzca el texto "María" en el filtro de nombre </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">E introduzca el valor "5" en el filtro de precio mínimo </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">E introduzca el valor "55" en el filtro de precio máximo </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe mostrar únicamente los productos que cumplan todos los filtros aplicados</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                    </tbody>
+                </table><div class="feature-title"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">E4QA-9 - Finalizar compra</font></font></div><table>
+                    <thead>
+                        <tr>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Característica</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Guión</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Pasos</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Resultado de la prueba</font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Finalizar compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">No visualizar botón realizar pago con carrito vacio</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el carrito está vacío </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando el usuario accede al carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces no debe mostrarse el botón "Realizar pago"</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Finalizar compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Abrir la página de pago</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario tiene productos en el carrito
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando hace clic en "Realizar pago"
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe ser redirigido a la página de realizar el pedido.</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Finalizar compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ver resumen de pedido</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el carrito contiene productos por valor de 100€ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando el usuario hace clic en realizar pago </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe ver el resumen del pedido con los datos: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| subtotal 100€ | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| IVA 21% 21€ | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| ENVIO 5€ | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| TOTAL 126€ |</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Finalizar compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Enviar campos obligatorios vacios</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página de realizar pedido </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando intente completar la compra sin rellenar "&lt; campo &gt;" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe mostrarse un mensaje de error indicando que el campo es obligatorio </font></font><br><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ejemplos: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | campo | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | Nombre completo | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | Correo electrónico | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | Dirección | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | Número de tarjeta|</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Finalizar compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Enviar campo tarjeta invalido</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario completa el formulario </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando introduzca el número de tarjeta &lt;tarjeta&gt; </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y haga clic en "Completar compra" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe mostrarse mensaje error tarjeta invalida </font></font><br><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ejemplos: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | tarjeta | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | 1234 5678 0000 0000 | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | 4242 |</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Finalizar compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Volver al carrito desde la página de pedido</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página de realizar el pedido
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando hace clic en "Volver al carrito"
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe ser redirigido a la página del carrito</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Finalizar compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Finalizar exitosamente la compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario completa correctamente todos los campos
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando haga clic en "Completar compra"
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe mostrarse la página de pedido completado
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y debe visualizar el resumen con:
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">    | Productos |
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">    | Subtotal |
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">    | IVA 21% |
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">    | Envío 5€ |
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">    | Totales |</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Finalizar compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Navegar a la tienda desde pedido completado</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el pedido se ha completado correctamente </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando haga clic en "Volver a la tienda" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe abrirse la página de productos</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Finalizar compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Navegar a Inicio desde pedido completado</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el pedido se ha completado correctamente </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando haga clic en "Ir al inicio" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe abrirse la página de inicio</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                    </tbody>
+                </table><div class="feature-title"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">E4QA-10 - Página de productos</font></font></div><table>
+                    <thead>
+                        <tr>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Característica</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Guión</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Pasos</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Resultado de la prueba</font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Página de productos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ver los productos que ofrece la tienda</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando el usuario entra en la sección de "Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Then debe ver un apartado titulado "Nuestros Productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And debe ver un listado de productos con los apartados: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| Categoría| </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| Nombre | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| Precio |</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                    </tbody>
+                </table><div class="feature-title"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">E4QA-11 - Página Quiénes somos</font></font></div><table>
+                    <thead>
+                        <tr>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Característica</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Guión</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Pasos</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Resultado de la prueba</font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Página Quiénes somos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ver información de Quiénes Somos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página web </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando el usuario accede en la sección de "Quiénes" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Then debe ver el título somos de "Quiénes Somos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And debe ver la descripción de la información de la tienda </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And debe ver en la descripción la historia de la tienda </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And debe ver en la descripción los valores de la tienda</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Página Quiénes somos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Visualización de la imagen del equipo</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario accede a la sección de "Quiénes Somos"
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando la página se carga completamente
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe visualizarse una imagen del equipo de la tienda
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y la imagen debe mostrarse correctamente sin pérdida visible de calidad
+ </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y el tamaño del archivo de la imagen debe estar optimizado para favorecer la carga y el SEO</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                    </tbody>
+                </table><div class="feature-title"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">E4QA-12 - Carrito de la compra</font></font></div><table>
+                    <thead>
+                        <tr>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Característica</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Guión</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Pasos</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Resultado de la prueba</font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Carrito de la Compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ver los productos añadidos al carrito</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario accede a la página de productos </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">When el usuario agrega productos al carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And accede al carrito desde el menú </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Then debe visualizarse los productos agregados con su nombre </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And debe visualizarse la imagen del producto </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And debe visualizarse la categoría del producto </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And debe visualizarse el precio del producto </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And debe mostrarse un resumen con los datos de la compra: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| Total de productos | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| IVA 21% | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| Envío 5€ | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">| Total final |</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Carrito de la Compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Eliminar un producto del carrito.</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página del carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y hay productos en el carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando el usuario elimina un producto del carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces el producto eliminado no debe aparecer en el carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y el total de la compra debe actualizarse</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Carrito de la Compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Vaciar el/los producto/s del carrito</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página del carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y hay productos en el carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando el usuario selecciona la opción vaciar carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces el carrito debe quedar vacío </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y debe mostrarse el botón "Ver productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y no debe mostrarse el botón "Vaciar Carrito"</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Carrito de la Compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Seguir comprando desde el carrito</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página del carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando el usuario selecciona el botón "Seguir comprando" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces el usuario debe ser redirigido a la página de productos</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Carrito de la Compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Mostrar botón "Ver productos" cuando el carrito esté vacío</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página del carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y el carrito está vacío </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando el usuario selecciona el botón "Ver productos" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces el usuario debe ser redirigido a la página de productos</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Carrito de la Compra</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Eliminar un producto del carrito desde la página de productos.</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en la página de productos </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y hay productos en el carrito ( visibles en un mini carrito o indicador) </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando el usuario elimina un producto del carrito desde la página de productos </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces el producto eliminado no debe aparecer en el carrito </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y el total de la compra debe actualizarse</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                    </tbody>
+                </table><div class="feature-title"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">E4QA-13 - Contacto</font></font></div><table>
+                    <thead>
+                        <tr>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Característica</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Guión</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Pasos</font></font></th>
+                            <th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Resultado de la prueba</font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Contacto</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Enviar formulario con teléfono inválido</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario esta en la pagina de formulario </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  Cuando rellene el teléfono invalido "&lt;telefono&gt;" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  Then debe ver un mensaje de error </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y el formulario no debe enviarse</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Contacto</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Validar longitud máxima de mensaje</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario esta en la pagina de formulario </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando introduzca un mensaje con mas de 500 caracteres </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y envia el formulario </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces debe mostrarse un mensaje de error </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Y el formulario no debe enviarse.</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Contacto</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Enviar formulario con campos obligatorios rellenos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario esta en la pagina de contacto </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">When complete los campos obligatorios nombre, email, y mensaje (importante que indica cuales son los campos obligatorios) </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Then el formuario debe enviarse</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Contacto</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Enviar campos obligatorios vacíos</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario está en el formulario de contacto </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">When intenta enviar el formulario sin completar el campo "&lt;campo&gt;" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Then debe mostrarse un mensaje de error indicando que el campo es obligatorio </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">And el formulario no debe enviarse. </font></font><br><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ejemplos: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | campo | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | Nombre | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | Correo electrónico | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | Mensaje |</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Contacto</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Enviar formulario con email inválido</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado que el usuario completa el formulario </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  Cuando introduzca el correo electrónico "&lt;email&gt;" </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  Y envíe el formulario inválido </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  Entonces debe mostrarse error en "&lt;resultado&gt;" </font></font><br><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Ejemplos: </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | correo electrónico | resultado | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | usuario.com | error de formato de correo electrónico inválido | </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">  | usuario@ | error de formato de correo electrónico inválido |</font></font></td>
+                                <td class="status-failed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Fallido</font></font></td>
+                            </tr>
+                        
+                            <tr>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Contacto</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Enviar formulario con campos obligatorios y opcionales</font></font></td>
+                                <td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Dado el usuario esta en la pagina de contacto </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cuando complete los campos obligatorios nombre, email, mensaje y teléfono </font></font><br><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entonces el formulario debe enviarse</font></font></td>
+                                <td class="status-passed"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Aprobado</font></font></td>
+                            </tr>
+                        
+                    </tbody>
+                </table></div>
+    </div>
+
+    <script>
+        document.getElementById('csvFile').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file && file.name.endsWith('.csv')) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const content = e.target.result;
+                    const parsedData = parseCSV(content);
+                    generateGroupedReport(parsedData);
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        // Function to parse the CSV, respecting double quotes and newlines inside cells
+        function parseCSV(content) {
+            const rows = [];
+            let currentRow = [];
+            let currentCell = '';
+            let insideQuotes = false;
+
+            for (let i = 0; i < content.length; i++) {
+                const char = content[i];
+                const nextChar = content[i + 1];
+
+                if (char === '"') {
+                    if (insideQuotes && nextChar === '"') {
+                        // Escape double quotes ("")
+                        currentCell += '"';
+                        i++;  // Skip the next quote
+                    } else {
+                        // Toggle the state of open/closed quotes
+                        insideQuotes = !insideQuotes;
+                    }
+                } else if (char === ',' && !insideQuotes) {
+                    // End of a cell
+                    currentRow.push(currentCell.trim());
+                    currentCell = '';
+                } else if (char === '\n' && !insideQuotes) {
+                    // End of a row
+                    if (currentCell || currentRow.length > 0) {
+                        currentRow.push(currentCell.trim());
+                        rows.push(currentRow);
+                        currentRow = [];
+                        currentCell = '';
+                    }
+                } else {
+                    // Add characters to the current cell
+                    currentCell += char;
+                }
+            }
+
+            // Ensure the last row is also processed
+            if (currentCell || currentRow.length > 0) {
+                currentRow.push(currentCell.trim());
+                rows.push(currentRow);
+            }
+
+            return rows;
+        }
+
+        // Function to escape special HTML characters
+        function escapeHTML(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+
+        // Function to get the class for status based on the result
+        function getStatusClass(status) {
+            if (status.toLowerCase() === 'passed') {
+                return 'status-passed';
+            } else if (status.toLowerCase() === 'failed') {
+                return 'status-failed';
+            } else if (status.toLowerCase() === 'not run yet') {
+                return 'status-notrun';
+            }
+            return '';
+        }
+
+        // Function to group scenarios by "Feature name" and generate separate tables
+        function generateGroupedReport(data) {
+            const reportContainer = document.getElementById('reportContainer');
+            reportContainer.innerHTML = ''; // Clear existing content
+
+            const headers = data[0]; // The first row contains the header
+
+            const groupedData = {};
+
+            // Group the data by "Jira Issue"
+            data.slice(1).forEach(row => {
+                const jiraIssue = row[0];
+                const featureName = row[1];
+                const scenarioName = row[2];
+                const status = row[4];
+                const steps = row[7];
+
+                if (!groupedData[jiraIssue]) {
+                    groupedData[jiraIssue] = [];
+                }
+
+                groupedData[jiraIssue].push({
+                    feature: featureName,
+                    scenario: scenarioName,
+                    status: status,
+                    steps: steps
+                });
+            });
+
+            // Generate a table for each "Jira Issue"
+            for (const jiraIssue in groupedData) {
+                const featureTitle = document.createElement('div');
+                featureTitle.classList.add('feature-title');
+                featureTitle.textContent = `${jiraIssue}`;
+                reportContainer.appendChild(featureTitle);
+
+                const table = document.createElement('table');
+                table.innerHTML = `
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Scenario</th>
+                            <th>Steps</th>
+                            <th>Test Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${groupedData[jiraIssue].map(item => `
+                            <tr>
+                                <td>${escapeHTML(item.feature)}</td>
+                                <td>${escapeHTML(item.scenario)}</td>
+                                <td>${escapeHTML(item.steps).replace(/\n/g, '<br>')}</td>
+                                <td class="${getStatusClass(item.status)}">${escapeHTML(item.status)}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                `;
+                reportContainer.appendChild(table);
+            }
+        }
+    </script><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: &#39;Google Sans&#39;, Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="./testresults_files/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Texto original</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Valora esta traducción</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Tu opinión servirá para ayudar a mejorar el Traductor de Google</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Buena traducción" aria-label="Buena traducción" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Mala traducción" aria-label="Mala traducción" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="https://translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0" src="./testresults_files/saved_resource.html"></iframe></div></div></div>
+
+
+
+</body></html>
