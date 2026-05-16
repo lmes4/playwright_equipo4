@@ -38,7 +38,7 @@ def test_filtrar_valor_sin_resultados(page: Page):
     productos_page.filtrar_por_nombre("manzana")
 
     print("Then debería ver el mensaje 'No se encontraron productos'")
-    productos_page.verificar_mensaje_no_resultados("No se encontraron productos")    
+    productos_page.verificar_mensaje_no_resultados()    
 
 
 
