@@ -140,4 +140,4 @@ def test_compra_datos_validos (page: Page):
     confirmation_page.hace_clic_volver_tienda()
  
     print ("Ve la URL https://web-qa.dev.adalab.es/products")
-    productos_page.abrir_productos_page()
+    productos_page.verificar_productos_url()
